@@ -2,3 +2,4 @@ django
 django-ninja
 gunicorn
 django-heroku
+dj-database-url

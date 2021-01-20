@@ -1,4 +1,6 @@
 from pathlib import Path
+
+import dj_database_url
 import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -60,14 +62,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'popov_todoist.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+DATABASE_URL = 'postgres://nfpajtbnaozzjq:1263fd79718dbe746382f60db5cad7824d3b27bec859829486e2345ea481b433@ec2-46-137-124-19.eu-west-1.compute.amazonaws.com:5432/d1u5m1bu09cqu3'
+
+default_config = dj_database_url.config(default=DATABASE_URL)
+default_config.update({"CONN_MAX_AGE": 20})
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': default_config
 }
 
 
