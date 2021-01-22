@@ -62,7 +62,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'popov_todoist.wsgi.application'
 
 
-DATABASE_URL = 'postgres://nfpajtbnaozzjq:1263fd79718dbe746382f60db5cad7824d3b27bec859829486e2345ea481b433@ec2-46-137-124-19.eu-west-1.compute.amazonaws.com:5432/d1u5m1bu09cqu3'
+DATABASE_URL = 'postgres://iguphmuudccbqs:07cb9936caa717c09340ad918ada5fadcb13c2de15f6ee017dd271e68c1881e2@ec2-46-137-100-204.eu-west-1.compute.amazonaws.com:5432/dh1fjs897uoms'
 
 default_config = dj_database_url.config(default=DATABASE_URL)
 default_config.update({"CONN_MAX_AGE": 20})
