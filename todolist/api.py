@@ -32,7 +32,7 @@ def sign_in(request, data: Creds):
         login_user(request, user)
         return f"Authenticated user {user}"
     else:
-        return f"No authenticated"
+        return f"Not authenticated"
 
 
 @api.get("/sign_out", tags=["auth"], auth=django_auth)
